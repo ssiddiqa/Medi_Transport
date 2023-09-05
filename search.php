@@ -48,7 +48,7 @@ require_once 'connect.php';
                                     class="bi bi-telephone me-2"></i>+88 01792492722</a>
                             <span class="text-body">|</span>
                             <a class="text-decoration-none text-body px-3" href="mailto:findyourdoctor@gmail.com"><i
-                                    class="bi bi-envelope me-2"></i>findyourdoctor@gmail.com</a>
+                                    class="bi bi-envelope me-2"></i>doctorhub@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-lg-end">
@@ -81,8 +81,8 @@ require_once 'connect.php';
             <div class="container">
                 <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                     <a href="home.html" class="navbar-brand">
-                        <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Find My
-                            Doctor</h1>
+                        <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Doctor Hub
+                        </h1>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarCollapse">
@@ -105,16 +105,30 @@ require_once 'connect.php';
         <div class="container-fluid pt-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Find A Doctor</h5>
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Doctor Hub</h5>
                     <h1 class="display-4 mb-4">Find A Healthcare Professionals</h1>
-                    <h5 class="fw-normal">You can search a doctor by Speciality.</h5>
+                    <h5 class="fw-normal">You can search a doctor by Specialty, Doctor's name and Hospital Name.</h5>
                 </div>
                 <div class="mx-auto" style="width: 100%; max-width: 600px;">
                     <form method="post">
-                        <div class="input-group">
-                            <select class="form-select border-primary w-40 speciality-search" name="search"
+                        <label for="selection"><b>Search By :</b></label>
+                        <select class="form-select border-primary w-40  mt-2" name="selection" id="selection">
+                            <option value="name">Name</option>
+                            <option value="specialty">Specialty</option>
+                            <option value="hospital">Hospital Name</option>
+                        </select>
+                        <!-- Input sections for different options -->
+                        <div id="nameInput" style="display: none;">
+                            <label for="name" class="mt-2"><b>Enter Doctor's Name:</b></label><br>
+                            <input class="form-control border-primary w-40 mt-2" type="text" name="name" id="name">
+                        </div>
+
+                        <div id="specialtyInput" style="display: none;">
+                            <label for="Specialty" class="mt-2"><b>Enter Specialty :</b></label>
+                            <br>
+                            <select class="form-select border-primary w-40 speciality-search mt-2" name="search"
                                 style="height: 60px;">
-                                <option selected>Speciality</option>
+                                <option selected>Specialty</option>
                                 <option value="Cardiologist">Cardiologist</option>
                                 <option value="Gynecologist">Gynecologist</option>
                                 <option value="Orthopedic">Orthopedic Surgeon</option>
@@ -123,26 +137,38 @@ require_once 'connect.php';
                                 <option value="Paediatrician">Paediatrician</option>
                                 <option value="Ophthalmologist">Ophthalmologist</option>
                             </select>
-                            <button class="btn btn-dark border-0 w-25" name="submit">Search</button>
                         </div>
+
+                        <div id="hospitalInput" style="display: none;">
+                            <label for="hospital" class="mt-2"><b>Enter Hospital Name:</b></label><br>
+                            <input class="form-control border-primary w-40 mt-3" type="text" name="hospital"
+                                id="hospital">
+                        </div>
+
+                        <button class="btn btn-dark border-0 w-25 mt-2" name="submit">Search</button>
                     </form>
                 </div>
             </div>
         </div>
         <!-- Search End -->
 
-        <!-- Search Result Start -->
+        <!-- Search Result Start Specialty-->
         <div class="container-fluid py-5">
             <table class="table">
                 <?php
-                if (isset($_POST['submit'])) {
-                    $search = $_POST['search'];
-                    $sql = "select * from information where specialty='$search'";
-                    $result = mysqli_query($con, $sql);
-                    // $num = mysqli_num_rows($result);
-                    // echo $num;
-                    if (mysqli_num_rows($result) > 0) {
-                        echo '<thead>
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $selectedOption = $_POST["selection"];
+
+                    if ($selectedOption === "name") {
+                        $name = $_POST["name"];
+                        if (isset($_POST['submit'])) {
+                            $name = $_POST['name'];
+                            $sql = "select * from information WHERE Name LIKE '%$name%'";
+                            $result = mysqli_query($con, $sql);
+                            // $num = mysqli_num_rows($result);
+                            // echo $num;
+                            if (mysqli_num_rows($result) > 0) {
+                                echo '<thead>
                         <tr>
                         <th>Name</th>
                         <th>Specialty</th>
@@ -152,8 +178,8 @@ require_once 'connect.php';
                         </tr>
                         </thead>
                         ';
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo '<tbody>
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<tbody>
                             <tr>
                         <td>' . $row['Name'] . '</td>
                         <td>' . $row['Specialty'] . '</td>
@@ -163,6 +189,74 @@ require_once 'connect.php';
                         </tr>
                         </tbody>
                         ';
+                                }
+                            }
+                        }
+                    } elseif ($selectedOption === "specialty") {
+                        // $specialty = $_POST["specialty"];
+                        if (isset($_POST['submit'])) {
+                            $search = $_POST['search'];
+                            $sql = "select * from information where specialty='$search'";
+                            $result = mysqli_query($con, $sql);
+                            // $num = mysqli_num_rows($result);
+                            // echo $num;
+                            if (mysqli_num_rows($result) > 0) {
+                                echo '<thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Specialty</th>
+                        <th>Experience</th>
+                        <th>Location</th>
+                        <th>Mobile No</th>
+                        </tr>
+                        </thead>
+                        ';
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<tbody>
+                            <tr>
+                        <td>' . $row['Name'] . '</td>
+                        <td>' . $row['Specialty'] . '</td>
+                        <td>' . $row['Experience'] . '</td>
+                        <td>' . $row['Location'] . '</td>
+                        <td>' . $row['Mobile No'] . '</td>
+                        </tr>
+                        </tbody>
+                        ';
+                                }
+                            }
+                        }
+                    } elseif ($selectedOption === "hospital") {
+                        $hospital = $_POST["hospital"];
+                        if (isset($_POST['submit'])) {
+                            $hospital = $_POST['hospital'];
+                            $sql = "select * from information WHERE Location LIKE '%$hospital%'";
+                            $result = mysqli_query($con, $sql);
+                            // $num = mysqli_num_rows($result);
+                            // echo $num;
+                            if (mysqli_num_rows($result) > 0) {
+                                echo '<thead>
+                        <tr>
+                        <th>Name</th>
+                        <th>Specialty</th>
+                        <th>Experience</th>
+                        <th>Location</th>
+                        <th>Mobile No</th>
+                        </tr>
+                        </thead>
+                        ';
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    echo '<tbody>
+                            <tr>
+                        <td>' . $row['Name'] . '</td>
+                        <td>' . $row['Specialty'] . '</td>
+                        <td>' . $row['Experience'] . '</td>
+                        <td>' . $row['Location'] . '</td>
+                        <td>' . $row['Mobile No'] . '</td>
+                        </tr>
+                        </tbody>
+                        ';
+                                }
+                            }
                         }
                     }
                 }
@@ -180,9 +274,9 @@ require_once 'connect.php';
                         <h4
                             class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                             Get In Touch</h4>
-                        <p class="mb-4">Found Your Doctor - Best Healthcare Solution In Your City</p>
+                        <p class="mb-4">Doctor Hub - Best Healthcare Solution In Your City</p>
                         <!-- <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p> -->
-                        <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>findyourdoctor@gmail.com</p>
+                        <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>doctorhub@gmail.com</p>
                         <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+88 01792492722</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -245,7 +339,7 @@ require_once 'connect.php';
             <div class="container">
                 <div class="row g-5">
                     <div class="col-md-6 text-center text-md-start">
-                        <p class="mb-md-0">&copy; <a class="text-primary" href="#">Find My Doctor</a>. All Rights
+                        <p class="mb-md-0">&copy; <a class="text-primary" href="#">Doctor Hub</a>. All Rights
                             Reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
@@ -257,7 +351,7 @@ require_once 'connect.php';
         <!-- Footer End -->
     </main>
 
-
+    <script src="js/search.js"></script>
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 

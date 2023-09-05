@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Find My Doctor</title>
+    <title>Doctor Hub</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -39,8 +39,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="home.php" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Find My
-                        Doctor</h1>
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Doctor Hub</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -65,8 +64,8 @@
         <div class="container py-5">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
-                    <h4 class="d-inline-block display-6 text-uppercase border-bottom border-5 hero-text">Welcome To Find
-                        My Doctor</h4>
+                    <h4 class="d-inline-block display-6 text-uppercase border-bottom border-5 hero-text">Welcome To
+                        Doctor Hub</h4>
                     <h1 class="display-1 mb-md-4 hero-text">Best Healthcare Solution In Your City</h1>
                     <div class="pt-2">
                         <a href="search.php"
@@ -96,12 +95,12 @@
                         <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
                         <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
                     </div>
-                    <p>Find My Doctor is a online platform designed to help you quickly and easily find the right
+                    <p>Doctor Hub is a online platform designed to help you quickly and easily find the right
                         doctor in your city. With the help of our advanced search features, you can easily filter
                         doctors based on their specialty and location, making it easier to find a doctor who meets your
                         specific needs. Whether you're looking for a primary care physician, specialist, or surgeon, our
                         website makes it easy to find the best doctors in your area. Say goodbye to endless searching
-                        and frustration, and let "Find My Doctor"</p>
+                        and frustration, and let "Doctor Hub"</p>
 
                 </div>
             </div>
@@ -232,9 +231,9 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Get In Touch</h4>
-                    <p class="mb-4">Found Your Doctor - Best Healthcare Solution In Your City</p>
+                    <p class="mb-4">Doctor Hub - Best Healthcare Solution In Your City</p>
                     <!-- <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p> -->
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>findyourdoctor@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>doctorhub@gmail.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+88 01792492722</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -293,7 +292,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Find My Doctor</a>. All Rights
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Doctor Hub</a>. All Rights
                         Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
