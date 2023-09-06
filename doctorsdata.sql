@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2023 at 07:42 AM
+-- Generation Time: Sep 06, 2023 at 07:11 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -64,7 +64,104 @@ INSERT INTO `information` (`Name`, `Specialty`, `Experience`, `Location`, `Mobil
 ('Dr. Shompa Chowdhury', 'Gynecologist', 'MBBS, DNB', 'Fatema Modern Hospital,Bara Kalibari Rd, Tangail', 'tel:01917020000'),
 ('Dr. Devi Bodro', 'Gynecologist', 'MBBS, DNB', 'Doctors Clinic,Akur Takur Para - Polashtoli Link Rd, Tangail', 'tel:01711945515'),
 ('Dr. Tahmina Sultana Nipa', 'Gynecologist', 'MBBS, DGO, DNB', 'Manobsheba Hospital, New Bus Terminal, Tangail', 'tel:01725272728'),
-('Dr. Rehana Parvin', 'Gynecologist', 'MBBS, FCFS', 'Medico Hospital,Registry Para Road, Tangail', 'tel:01715885135');
+('Dr. Rehana Parvin', 'Gynecologist', 'MBBS, FCFS', 'Medico Hospital,Registry Para Road, Tangail', 'tel:01715885135'),
+('Dr. M. Hosen', 'Paediatrician', 'MBBS, MS, DMCH', 'Al shefa clinic and Nursing Home, Bara Kalibari Rd, Tangail', 'tel:01790336296'),
+('Dr. Md. Abul Farez', 'Paediatrician', 'MBBS, MS, DH', 'Doctors Clinic ,Akur Takur Para - Polashtoli Link Rd, Tangail', 'tel:01711945549	'),
+('Dr. Shombu Nath Chokrobarti', 'Paediatrician', 'MBBS, BS', 'Doctors Clinic ,Akur Takur Para - Polashtoli Link Rd, Tangail', 'tel:01711945549'),
+('Dr. Md. Asaduzzaman', 'Paediatrician', 'MBBS, BCS, MS', 'Manobsheba Hospital, New Bus Terminal, Tangail', 'tel:01725272728\r\n'),
+('Dr. Amit Shom', 'Paediatrician', 'MBBS, BCS, MD', 'Central Mucta Hospital,BB Girls School Road, Tangail\r\n', 'tel:01711576121'),
+('Dr. Md. Ruhul Bari', 'Paediatrician', 'MBBS, PGT, NRP', 'Dholesshori Hospital, Akur Takur Para, Zila Sadar Rd, Tangail', 'tel:01710002653'),
+('Dr. Khandakar Sayed Hosen', 'Paediatrician', 'MBBS, BCS, DCH, FCPS', 'Medinova Medical Services Ltd,SR Bhawan, 1044 Main Road Shanti Kunja More, Thana Para', 'tel:01793121241'),
+('Dr. Md. Jahangir Alam', 'Paediatrician', 'MBBS, BCS, FCPS', 'Ayesha Khanam Memorial Hospital, main road, Tangail', 'tel:01713572913'),
+('Dr. Sheikh Anisul Haque', 'Paediatrician', 'MBBS, MS', 'Sheba Clinic And Hospital, Old Bus Stand, Tangail', 'tel:01711225211'),
+('Dr. Muhammad Abdus Samad', 'Ophthalmologist', 'MBBS, MS, DOLV(eye)', 'Sheba Eye & General Hospital,Bishwash betka,near old bus stand', 'tel:01717626648'),
+('Dr. Md. Shafikur Rahman', 'Ophthalmologist', 'MBBS, MS', 'Rokeya Eye Care center, Kagmari Road, Santikunzo Mor, Tangail ', 'tel:01791256517'),
+('Dr. Abdur Rakib Tushar', 'Ophthalmologist', 'MBBS, MS, FCPS(eye)', 'Afia Eye Care Center,Bottola, C&B Road, Akur Takur Para , Polashtoli Link Rd ', 'tel:01746006749'),
+('Dr. Asaduzzaman', 'Ophthalmologist', 'MBBS, FCPS(eye), DO', 'Afia Eye Care Center,Bottola, C&B Road, Akur Takur Para , Polashtoli Link Rd', 'tel:01746006749');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `message`, `timestamp`) VALUES
+(1, 'Your website is useful', '2023-09-06 10:07:13'),
+(2, 'It is useful site', '2023-09-06 10:08:32'),
+(3, 'I want to say Thank You', '2023-09-06 10:14:59'),
+(4, 'Just wanted to check', '2023-09-06 10:16:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `trainschedule`
+--
+
+CREATE TABLE `trainschedule` (
+  `Train No` int(11) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Off Day` varchar(100) NOT NULL,
+  `From(location)` varchar(100) NOT NULL,
+  `Departure Time` varchar(100) NOT NULL,
+  `To(location)` varchar(100) NOT NULL,
+  `Arrival Time` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `trainschedule`
+--
+
+INSERT INTO `trainschedule` (`Train No`, `Name`, `Off Day`, `From(location)`, `Departure Time`, `To(location)`, `Arrival Time`) VALUES
+(705, 'Ekota Express', 'Tuesday', 'Tangail', '12:05(PM)', 'Dinajpur', '6:50(PM)'),
+(706, 'Ekota Express', 'Monday', 'Tangail', '5:42(PM)', 'Dhaka', '8:10(PM)'),
+(725, 'Sundarban Express', 'Tuesday', 'Tangail', '3:30(PM)', 'Dhaka', '5:40(PM)'),
+(726, 'Sundarban Express', 'Wednesday', 'Tangail', '8:41(AM)', 'Khulna', '3:40(PM)'),
+(751, 'Lalmoni Express', 'Friday', 'Tangail', '12:19(AM)', 'Lalmanirhat', '8:20(AM)'),
+(752, 'Lalmoni Express', 'Friday', 'Tangail', '6:47(PM)', 'Dhaka', '8:55(PM)'),
+(753, 'Silkcity Express', 'Sunday', 'Tangail', '5:05(PM)', 'Rajshahi', '8:45(PM)'),
+(754, 'Silkcity Express', 'Sunday', 'Tangail', '11:08(AM)', 'Dhaka', '1:30(PM)'),
+(757, 'Drutajan Express', 'Wednesday', 'Tangail', '10:08(PM)', 'Dinajpur', '4:10(AM)'),
+(758, 'Drutajan Express', 'Wednesday', 'Tangail', '4:08(PM)', 'Dhaka', '6:10(PM)'),
+(759, 'Padma Express', 'Tuesday', 'Tangail', '1:06(AM)', 'Rajshahi', '4:40(AM)'),
+(760, 'Padma Express', 'Tuesday', 'Tangail', '7:30(PM)', 'Dhaka', '9:40(PM)'),
+(763, 'Chitra Express', 'Monday', 'Tangail', '3:20(PM)', 'Dhaka', '5:40(PM)'),
+(764, 'Chitra Express', 'Monday', 'Tangail', '9:00(PM)', 'Khulna', '3:50(AM)'),
+(765, 'Nill Sagar Express', 'Monday', 'Tangail', '10:22(AM)', 'Chilahati', '5:45(PM)'),
+(766, 'Nill Sagar Express', 'Sunday', 'Tangail', '4:42(AM)', 'Dhaka', '7:10(AM)'),
+(769, 'Dhumketu Express', 'Saturday', 'Tangail', '7:59(AM)', 'Rajshahi', '11:40(AM)'),
+(771, 'Rangpur Express', 'Sunday', 'Tangail', '11:07(AM)', 'Rangpur', '7:00(PM)'),
+(775, 'Sirajgonj Express', 'Saturday', 'Tangail', '7:58(AM)', 'Dhaka', '10:15(AM)'),
+(776, 'Sirajgonj Express', 'Saturday', 'Tangail', '7:30(PM)', 'Sirajgonj ', '9:25(PM)');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

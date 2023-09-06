@@ -13,43 +13,6 @@
     display: block !important;
 }
 
-.btn {
-    font-weight: 700;
-    transition: .5s;
-}
-
-.btn:hover {
-    -webkit-box-shadow: 0 8px 6px -6px #555555;
-    -moz-box-shadow: 0 8px 6px -6px #555555;
-    box-shadow: 0 8px 6px -6px #555555;
-}
-
-.btn-primary {
-    color: #FFFFFF;
-}
-
-.btn-square {
-    width: 36px;
-    height: 36px;
-}
-
-.btn-sm-square {
-    width: 28px;
-    height: 28px;
-}
-
-.btn-lg-square {
-    width: 46px;
-    height: 46px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-}
 
 .back-to-top {
     position: fixed;
@@ -113,7 +76,7 @@
 .hero-header {
     background-color: rgba(19, 197, 221, 0.2);
     /*primary color */
-    background-image: url(../img/hero.jpg);
+    background-image: url(../img/white.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -146,19 +109,5 @@
 
 .service-item .service-icon i {
     transform: rotate(15deg);
-}
-
-.service-item a.btn {
-    position: absolute;
-    width: 60px;
-    bottom: -48px;
-    left: 50%;
-    margin-left: -30px;
-    opacity: 0;
-}
-
-.service-item:hover a.btn {
-    bottom: -24px;
-    opacity: 1;
 }
 

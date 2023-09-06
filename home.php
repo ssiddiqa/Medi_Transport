@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Doctor Hub</title>
+    <title>Doctor Dial</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -39,7 +39,8 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="home.php" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Doctor Hub</h1>
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Doctor Dial
+                    </h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -65,13 +66,12 @@
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
                     <h4 class="d-inline-block display-6 text-uppercase border-bottom border-5 hero-text">Welcome To
-                        Doctor Hub</h4>
+                        Doctor Dial</h4>
                     <h1 class="display-1 mb-md-4 hero-text">Best Healthcare Solution In Your City</h1>
                     <div class="pt-2">
                         <a href="search.php"
                             class="btn btn-secondary rounded-pill py-md-3 px-md-5 mx-2 border-2 border-light px-5 py-3">Find
                             Doctor</a>
-                        <!-- <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a> -->
                     </div>
                 </div>
             </div>
@@ -95,12 +95,12 @@
                         <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
                         <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
                     </div>
-                    <p>Doctor Hub is a online platform designed to help you quickly and easily find the right
+                    <p>Doctor Dial is a online platform designed to help you quickly and easily find the right
                         doctor in your city. With the help of our advanced search features, you can easily filter
                         doctors based on their specialty and location, making it easier to find a doctor who meets your
                         specific needs. Whether you're looking for a primary care physician, specialist, or surgeon, our
                         website makes it easy to find the best doctors in your area. Say goodbye to endless searching
-                        and frustration, and let "Doctor Hub"</p>
+                        and frustration, and let "Doctor Dial"</p>
 
                 </div>
             </div>
@@ -215,9 +215,6 @@
                         </a>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
@@ -228,51 +225,37 @@
     <div class="container-fluid bg-dark text-light mt-5 py-5" id="footer">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Get In Touch</h4>
-                    <p class="mb-4">Doctor Hub - Best Healthcare Solution In Your City</p>
-                    <!-- <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p> -->
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>doctorhub@gmail.com</p>
+                    <p class="mb-4">Doctor Dial - Best Healthcare Solution In Your City</p>
+
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>doctordial@gmail.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+88 01792492722</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Quick Links</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.php"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="index.php#about"><i class="fa fa-angle-right me-2"></i>About
+                        <a class="text-light mb-2" href="home.php"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="home.php#about"><i class="fa fa-angle-right me-2"></i>About
                             Us</a>
-                        <a class="text-light mb-2" href="index.php#service"><i class="fa fa-angle-right me-2"></i>Our
+                        <a class="text-light mb-2" href="home.php#service"><i class="fa fa-angle-right me-2"></i>Our
                             Services</a>
                         <a class="text-light mb-2" href="search.php"><i class="fa fa-angle-right me-2"></i>Find a
                             Doctor</a>
-
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                        Popular Links</h4>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.php"><i class="fa fa-angle-right me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="index.php#service"><i class="fa fa-angle-right me-2"></i>Our
-                            Services</a>
-                        <a class="text-light mb-2" href="search.php"><i class="fa fa-angle-right me-2"></i>Find a
-                            Doctor</a>
 
-
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Contact Us</h4>
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3 border-0" placeholder="Your Message">
-
-                            <button class="btn btn-primary">Send</button>
-                        </div>
+                    <form id="messageForm" method="POST">
+                        <textarea class="form-control p-3 border-0" id="message" name="message"
+                            placeholder="Your Message" required></textarea>
+                        <input class="mt-2 btn btn-primary" type="submit" value="Send">
                     </form>
+
                     <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
                     <div class="d-flex">
                         <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#"><i
@@ -286,17 +269,17 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Doctor Hub</a>. All Rights
-                        Reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="https://ssiddiqa.github.io">ICT</a></p>
+            <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-md-6 text-center text-md-start">
+                            <p class="mb-md-0">&copy; <a class="text-primary" href="#">Doctor Dial</a>. All Rights
+                                Reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <p class="mb-0">Designed by <a class="text-primary" href="#">ICT</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,6 +293,34 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#messageForm").submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                // Get the message from the textarea
+                var message = $("#message").val();
+
+                // Send the message using AJAX
+                $.ajax({
+                    type: "POST",
+                    url: "store_message.php", // Replace with the URL of your PHP script
+                    data: { message: message },
+                    success: function (response) {
+                        // Handle the response from the server (e.g., display a success message)
+                        alert(response);
+                    },
+                    error: function () {
+                        alert("An error occurred while sending the message.");
+                    }
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ require_once 'connect.php';
 
 <head>
     <meta charset="utf-8">
-    <title>Doctor Dial</title>
+    <title>Rails On Time</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -48,7 +48,7 @@ require_once 'connect.php';
                                     class="bi bi-telephone me-2"></i>+88 01792492722</a>
                             <span class="text-body">|</span>
                             <a class="text-decoration-none text-body px-3" href="#"><i
-                                    class="bi bi-envelope me-2"></i>doctordial@gmail.com</a>
+                                    class="bi bi-envelope me-2"></i>railsontime@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-lg-end">
@@ -81,7 +81,8 @@ require_once 'connect.php';
             <div class="container">
                 <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                     <a href="home.html" class="navbar-brand">
-                        <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Doctor Dial
+                        <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Rails On
+                            Time
                         </h1>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -90,10 +91,10 @@ require_once 'connect.php';
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0">
-                            <a href="home.php" class="nav-item nav-link ">Home</a>
-                            <a href="home.php#about" class="nav-item nav-link">About</a>
-                            <a href="home.php#service" class="nav-item nav-link">Service</a>
-                            <a href="home.php" class="nav-item nav-link active">Find Doctor</a>
+                            <a href="homee.php" class="nav-item nav-link ">Home</a>
+                            <a href="homee.php#about" class="nav-item nav-link">About</a>
+                            <a href="homee.php#service" class="nav-item nav-link">Service</a>
+                            <a href="homee.php" class="nav-item nav-link active">Find Schedule</a>
                             <a href="#footer" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
@@ -105,9 +106,9 @@ require_once 'connect.php';
         <div class="container-fluid pt-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Doctor Dial</h5>
-                    <h1 class="display-4 mb-4">Find A Healthcare Professional</h1>
-                    <h5 class="fw-normal">You can search a doctor by Specialty, Doctor's name and Hospital Name.</h5>
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Rails On Time</h5>
+                    <h1 class="display-4 mb-4">Find Train Schedule</h1>
+                    <h5 class="fw-normal">You can search Train Schedule by Train Name, Train No, Area, Time.</h5>
                 </div>
                 <div class="mx-auto" style="width: 100%; max-width: 600px;">
                     <form method="post">
@@ -115,31 +116,31 @@ require_once 'connect.php';
                         <select class="form-select border-primary w-40  mt-2" name="selection" id="selection">
                             <option selected>Choose A option</option>
                             <option value="name">Live Search</option>
-                            <option value="specialty">Specialty</option>
+                            <option value="location">Location</option>
                         </select>
                         <!-- Input sections for different options -->
                         <div id="nameInput" style="display: none;">
-                            <label for="name" class="mt-2"><b>Enter Doctor's Name or Hospital's Name:</b></label><br>
+                            <label for="name" class="mt-2"><b>Enter Any text: </b></label><br>
                             <div class="container">
-
                                 <input class="form-control border-primary w-40 mt-2" type="text" class="form-control"
                                     id="search">
                             </div>
                         </div>
 
-                        <div id="specialtyInput" style="display: none;">
-                            <label for="Specialty" class="mt-2"><b>Enter Specialty :</b></label>
+                        <div id="LocationInput" style="display: none;">
+                            <label for="location" class="mt-2"><b>Enter Location :</b></label>
                             <br>
                             <select class="form-select border-primary w-40 speciality-search mt-2" name="search"
                                 style="height: 60px;">
-                                <option selected>Specialty</option>
-                                <option value="Cardiologist">Cardiologist</option>
-                                <option value="Gynecologist">Gynecologist</option>
-                                <option value="Orthopedic">Orthopedic Surgeon</option>
-                                <option value="Neurologist">Neurologist</option>
-                                <option value="Dentists">Dentists</option>
-                                <option value="Paediatrician">Paediatrician</option>
-                                <option value="Ophthalmologist">Ophthalmologist</option>
+                                <option selected>Location</option>
+                                <option value="Chilahati">Chilahati</option>
+                                <option value="Dhaka">Dhaka</option>
+                                <option value="Dinajpur">Dinajpur</option>
+                                <option value="Khula">Khulna</option>
+                                <option value="Lalmanirhat">Lalmanirhat</option>
+                                <option value="Rajshahi">Rajshahi</option>
+                                <option value="Rangpur">Rangpur</option>
+                                <option value="Sirajganj">Sirajganj</option>
                             </select>
                             <button class="btn btn-dark border-0 w-25 mt-2" name="submit">Search</button>
                         </div>
@@ -150,36 +151,40 @@ require_once 'connect.php';
         </div>
         <!-- Search End -->
 
-        <!-- Search Result Start -->
+        <!-- Search Result Start Specialty-->
         <div class="container-fluid py-5" id="searchresult">
             <div class="table-responsive-sm">
                 <table class="table  table-hover">
                     <?php
                     if (isset($_POST['submit'])) {
                         $search = $_POST['search'];
-                        $sql = "select * from information where specialty='$search'";
+                        $sql = "select * from `trainschedule` where `To(location)`='$search'";
                         $result = mysqli_query($con, $sql);
                         // $num = mysqli_num_rows($result);
                         // echo $num;
                         if (mysqli_num_rows($result) > 0) {
                             echo '<thead>
                         <tr>
+                        <th>Train No</th>
                         <th>Name</th>
-                        <th>Specialty</th>
-                        <th>Experience</th>
-                        <th>Location</th>
-                        <th>Mobile No</th>
+                        <th>Off Day</th>
+                        <th>From(location)</th>
+                        <th>Departure Time</th>
+                        <th>To(location)</th>
+                        <th>Arrival Time</th>
                         </tr>
                         </thead>
                         ';
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo '<tbody>
                             <tr>
+                        <td>' . $row['Train No'] . '</td>
                         <td>' . $row['Name'] . '</td>
-                        <td>' . $row['Specialty'] . '</td>
-                        <td>' . $row['Experience'] . '</td>
-                        <td>' . $row['Location'] . '</td>
-                        <td>' . $row['Mobile No'] . '</td>
+                        <td>' . $row['Off Day'] . '</td>
+                        <td>' . $row['From(location)'] . '</td>
+                        <td>' . $row['Departure Time'] . '</td>
+                        <td>' . $row['To(location)'] . '</td>
+                        <td>' . $row['Arrival Time'] . '</td>
                         </tr>
                         </tbody>
                         ';
@@ -192,10 +197,9 @@ require_once 'connect.php';
         </div>
         <!-- Search Result End -->
 
-
     </main>
 
-    <script src="js/search.js"></script>
+    <script src="js/search1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -205,7 +209,7 @@ require_once 'connect.php';
             $("#search").keypress(function () {
                 $.ajax({
                     type: 'POST',
-                    url: 'fetch.php',
+                    url: 'fetch1.php',
                     data: {
                         name: $("#search").val(),
                     },
