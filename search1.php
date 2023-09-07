@@ -91,11 +91,10 @@ require_once 'connect.php';
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav ms-auto py-0">
-                            <a href="homee.php" class="nav-item nav-link ">Home</a>
-                            <a href="homee.php#about" class="nav-item nav-link">About</a>
-                            <a href="homee.php#service" class="nav-item nav-link">Service</a>
-                            <a href="homee.php" class="nav-item nav-link active">Find Schedule</a>
-                            <a href="homee.php#footer" class="nav-item nav-link">Contact</a>
+                            <a href="home.php" class="nav-item nav-link ">Home</a>
+                            <a href="home.php#about" class="nav-item nav-link">About</a>
+                            <a href="home.php#service" class="nav-item nav-link">Service</a>
+                            <a href="home.php#footer" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                 </nav>
