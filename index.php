@@ -56,22 +56,30 @@
         </div>
     </div>
     <!-- Navbar End -->
+
+    <!-- Hero Start -->
     <div class="container-fluid py-5 mb-5 hero-header">
         <div class="container py-5">
-            <div class="row justify-content-start align-items-center" style="right:30%">
-                <h1 class="text-center m-4 ">Welcome To LifeSync Hub</h1>
-                <p class="text-center" style="font-size:20px">Introducing LifeSync Hub: Your all-in-one web
-                    application for
-                    seamless daily
-                    living.
-                    Discover local doctors, medical facilities, and healthcare information tailored to your area, and
-                    stay
-                    on track with real-time train schedules for stress-free commuting, ensuring your daily life is
-                    always on
-                    the right track.</p>
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h4 class="d-inline-block display-6 text-uppercase border-bottom border-5 hero-text">Welcome To
+                        LifeSync Hub</h4>
+                    <h5>Introducing LifeSync Hub: Your
+                        all-in-one web
+                        application for
+                        seamless daily
+                        living.
+                        Discover local doctors, medical facilities, and healthcare information tailored to your area,
+                        and
+                        stay
+                        on track with real-time train schedules for stress-free commuting, ensuring your daily life is
+                        always on
+                        the right track.</h5>>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Hero End -->
 
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">

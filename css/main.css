@@ -5,15 +5,6 @@
     --dark: #1D2A4D;
 }
 
-.hide {
-    display: none;
-}
-
-.visible {
-    display: block !important;
-}
-
-
 .back-to-top {
     position: fixed;
     display: none;
@@ -35,10 +26,6 @@
     transition: .5s;
 }
 
-.navbar-light .navbar-nav .nav-link:hover,
-.navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
 
 @media (min-width: 992px) {
     .navbar-light .navbar-nav .nav-link::before {

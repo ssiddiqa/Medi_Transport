@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/travel.css" rel="stylesheet">
 </head>
 
 <body>
@@ -129,9 +129,8 @@
                         <p class="m-0">Train travel: timeless charm, modern convenience. Whether it's for commuting or
                             leisure, train travel remains a timeless choice for those who appreciate the charm and
                             reliability of railroads.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search1.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search1.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

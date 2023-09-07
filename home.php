@@ -29,7 +29,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/design.css" rel="stylesheet">
 </head>
 
 <body>
@@ -126,9 +126,8 @@
                         <h4 class="mb-3">Cardiologist</h4>
                         <p class="m-0">a doctor who specializes in the study or treatment of heart diseases and heart
                             abnormalities.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -140,9 +139,8 @@
                         <h4 class="mb-3">Gynecologist</h4>
                         <p class="m-0">a doctor who specializes in female reproductive health. They diagnose and treat
                             issues related to the female reproductive tract.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -154,9 +152,8 @@
                         <h4 class="mb-3">Orthopedic Surgeon</h4>
                         <p class="m-0">a surgeon specializing in the branch of surgery concerned with disorders of the
                             spine and joints and the repair of deformities of these parts.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -168,9 +165,8 @@
                         <h4 class="mb-3">Neurologist</h4>
                         <p class="m-0">a doctor who specializes in the diagnosis and treatment of disorders of the
                             nervous system.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -182,9 +178,8 @@
                         <h4 class="mb-3">Dentists</h4>
                         <p class="m-0">a doctor who is qualified to treat diseases and other conditions that affect the
                             teeth and gums.</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -195,9 +190,8 @@
                         </div>
                         <h4 class="mb-3">Paediatrician</h4>
                         <p class="m-0">a doctor who deals with the diseases of children</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -210,9 +204,8 @@
                         <h4 class="mb-3">Ophthalmologist</h4>
                         <p class="m-0">An ophthalmologist is a medical or osteopathic doctor who specializes in eye and
                             vision care</p>
-                        <a class="btn btn-lg btn-primary rounded-pill" href="search.php">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
+                        <a href="search.php" class="btn btn-lg btn-primary rounded-pill m-3"
+                            style="background-color:#13C5DD"> <i class="bi bi-arrow-right"></i></a>
                     </div>
                 </div>
             </div>

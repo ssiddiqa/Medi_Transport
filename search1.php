@@ -95,7 +95,7 @@ require_once 'connect.php';
                             <a href="homee.php#about" class="nav-item nav-link">About</a>
                             <a href="homee.php#service" class="nav-item nav-link">Service</a>
                             <a href="homee.php" class="nav-item nav-link active">Find Schedule</a>
-                            <a href="#footer" class="nav-item nav-link">Contact</a>
+                            <a href="homee.php#footer" class="nav-item nav-link">Contact</a>
                         </div>
                     </div>
                 </nav>
