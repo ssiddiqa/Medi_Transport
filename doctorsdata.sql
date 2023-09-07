@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2023 at 07:11 PM
+-- Generation Time: Sep 07, 2023 at 04:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -99,7 +99,10 @@ INSERT INTO `messages` (`id`, `message`, `timestamp`) VALUES
 (1, 'Your website is useful', '2023-09-06 10:07:13'),
 (2, 'It is useful site', '2023-09-06 10:08:32'),
 (3, 'I want to say Thank You', '2023-09-06 10:14:59'),
-(4, 'Just wanted to check', '2023-09-06 10:16:45');
+(4, 'Just wanted to check', '2023-09-06 10:16:45'),
+(5, 'it\'s night time', '2023-09-06 17:14:47'),
+(6, 'hello!', '2023-09-07 06:49:24'),
+(7, 'NICE DAY !', '2023-09-07 13:26:39');
 
 -- --------------------------------------------------------
 
@@ -141,7 +144,35 @@ INSERT INTO `trainschedule` (`Train No`, `Name`, `Off Day`, `From(location)`, `D
 (769, 'Dhumketu Express', 'Saturday', 'Tangail', '7:59(AM)', 'Rajshahi', '11:40(AM)'),
 (771, 'Rangpur Express', 'Sunday', 'Tangail', '11:07(AM)', 'Rangpur', '7:00(PM)'),
 (775, 'Sirajgonj Express', 'Saturday', 'Tangail', '7:58(AM)', 'Dhaka', '10:15(AM)'),
-(776, 'Sirajgonj Express', 'Saturday', 'Tangail', '7:30(PM)', 'Sirajgonj ', '9:25(PM)');
+(776, 'Sirajgonj Express', 'Saturday', 'Tangail', '7:30(PM)', 'Sirajgonj ', '9:25(PM)'),
+(702, 'Subarna Express', 'Friday', 'Dhaka', '3:00(PM)', 'Chittagong', '8:30(PM)'),
+(704, 'Mahanagar Provati', 'No', 'Dhaka', '7:45(AM)', 'Chittagong', '3:55(PM)'),
+(705, 'Ekota Express', 'Tuesday', 'Dhaka', '10:00(AM)', 'Dinajpur', '7:45(PM)'),
+(707, 'Tista Express', 'Monday', 'Dhaka', '7:30(AM)', 'Dewangonj Bazar', '12:45(PM)'),
+(709, 'Parabat Express', 'Tuesday', 'Dhaka', '6:35(AM)', 'Sylhet', '1:40(PM)'),
+(712, 'Upakul Express', 'Tuesday', 'Dhaka', '3:20(PM)', 'Noakhali', '9:40(PM)'),
+(717, 'Joyntika Express', 'No', 'Dhaka', '12:00(PM)', 'Sylhet', '7:45(PM)'),
+(722, 'Mahanagar Express', 'Sunday', 'Dhaka', '9:00(PM)', 'Chittagong', '5:00(AM)'),
+(726, 'Sundarban Express', 'Wednesday', 'Dhaka', '6:20(AM)', 'khulna', '4:20(PM)'),
+(735, 'Agnibina', 'No', 'Dhaka', '9:40(AM)', 'Tarakandi', '3:20(PM)'),
+(737, 'Egarosindhur Provati', 'Wednesday', 'Dhaka', '7:15(AM)', 'Kishorganj', '11:15(AM)'),
+(739, 'Upaban Express', 'Wednesday', 'Dhaka', '9:50(PM)', 'Sylhet', '5:30(AM)'),
+(743, 'Bhrammaputra Express', 'No', 'Dhaka', '6:00(PM)', 'Dewangonj Bazar', '12:20(AM)'),
+(745, 'Jamuna Express', 'No', 'Dhaka', '4:40(PM)', 'Banga Bondhu setu (East)', '12:20(AM)'),
+(749, 'Egarosindhur Godhuli', 'No', 'Dhaka', '6:30(PM)', 'Kishorganj', '10:45(PM)'),
+(751, 'Lalmoni Express', 'Friday', 'Dhaka', '10:10(PM)', 'Lalmonirhat', '8:20(AM)'),
+(753, 'Silkcity Express', 'Sunday', 'Dhaka', '2:40(PM)', 'Rajshahi', '9:05(PM)'),
+(757, 'Drutajan Express', 'Wednesday', 'Dhaka', '7:40(PM)', 'Dinajpur', '5:30(AM)'),
+(759, 'Padma Express', 'Tuesday', 'Dhaka', '11:10(PM)', 'Rajshahi', '4:30(AM)'),
+(764, 'Chitra Express', 'Monday', 'Dhaka', '7:00(PM)', 'Khulna', '5:10(AM)'),
+(769, 'Dhumketu Express', 'Saturday', 'Dhaka', '6:00(AM)', 'Rajshahi', '11:50(AM)'),
+(771, 'Rangpur Express', 'Sunday', 'Dhaka', '9:00(AM)', 'Rangpur', '7:00(PM)'),
+(773, 'Kalani Express', 'Friday', 'Dhaka', '4:00(PM)', 'Sylhet', '10:00(PM)'),
+(776, 'Sirajgonj Express', 'Saturday', 'Dhaka', '5:00(PM)', 'Ishurdi', '12:00(AM)'),
+(777, 'Haore Express', 'Wednesday', 'Dhaka', '11:50(PM)', 'Mohangonj', '6:10(AM)'),
+(781, 'Kishorgonj Express', 'Friday', 'Dhaka', '10:20(AM)', 'Kishorgonj ', '2:15(PM)'),
+(788, 'Sonar Bangla Express', 'Saturday', 'Dhaka', '7:00(AM)', 'Chittagong', '12:40(PM)'),
+(789, 'Chittagong', 'Monday', 'Dhaka', '12:20(PM)', 'Mohangonj', '6:50(PM)');
 
 --
 -- Indexes for dumped tables
@@ -161,7 +192,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
