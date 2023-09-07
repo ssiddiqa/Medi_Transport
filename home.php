@@ -21,9 +21,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +32,7 @@
 
 <body>
     <!-- Navbar Start -->
-    <div class="container-fluid  bg-white shadow-sm">
+    <div class="container-fluid sticky-top bg-white shadow-sm"> <!--navbaSTicky -->
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="home.php" class="navbar-brand">
@@ -67,17 +64,11 @@
                 <div class="col-lg-8 text-center text-lg-start">
                     <h4 class="d-inline-block display-6 text-uppercase border-bottom border-5 hero-text">Welcome To
                         LifeSync Hub</h4>
-                    <h5>Introducing LifeSync Hub: Your
-                        all-in-one web
-                        application for
-                        seamless daily
-                        living.
+                    <h5>Introducing LifeSync Hub: Your all-in-one web application for seamless daily living.
                         Discover local doctors, medical facilities, and healthcare information tailored to your area,
-                        and
-                        stay
-                        on track with real-time train schedules for stress-free commuting, ensuring your daily life is
-                        always on
-                        the right track.</h5>>
+                        and stay on track with real-time train schedules for stress-free commuting, ensuring your daily
+                        life is
+                        always on the right track.</h5>>
                 </div>
             </div>
         </div>
@@ -101,13 +92,13 @@
                         <h1 class="display-4">We intend to make life easier for you and your family.
                         </h1>
                     </div>
-                    <p>Welcome to Rails On Time, your one-stop destination for all your train schedule needs. We
-                        understand the importance of timely and hassle-free travel, which is why we provide
-                        comprehensive and up-to-date train schedules for your convenience. Whether you're a daily
-                        commuter or planning a long-distance journey, our user-friendly platform offers quick and easy
-                        access to train departure and arrival times, allowing you to plan your trips with confidence.
-                        Say goodbye to waiting at the station and hello to a seamless rail travel experience. Explore
-                        our website and embark on a journey of punctuality and convenience!
+                    <p>Introducing "LifeSync Hub"- the ultimate daily life companion! This innovative web application
+                        seamlessly integrates healthcare and commute planning, making it easier than ever to find local
+                        doctors and access real-time train schedules. Simplify your daily routine, whether you're
+                        searching for a healthcare professional or planning your commute. With LifeSync Hub, you have
+                        the power to manage both your health and your daily travel effortlessly.
+                        Experience the convenience of LifeSync Hub today and take control of your daily life with ease.
+                        Say hello to a healthier you and a smoother commute, all in one place!
                     </p>
 
                 </div>
@@ -155,6 +146,7 @@
         </div>
     </div>
     <!-- Services End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5" id="footer">
         <div class="container py-5">
@@ -167,6 +159,7 @@
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>admin@gmail.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+88 01792492722</p>
                 </div>
+                <!-- qucik links -->
                 <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Quick Links</h4>
@@ -182,7 +175,7 @@
                             Time</a>
                     </div>
                 </div>
-
+                <!-- contact section -->
                 <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Contact Us</h4>
@@ -205,7 +198,8 @@
                     </div>
                 </div>
             </div>
-            <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+            <!-- bottom line -->
+            <div class="container-fluid bg-dark text-light border-top mt-3 border-secondary py-4">
                 <div class="container">
                     <div class="row g-5">
                         <div class="col-md-6 text-center text-md-start">
@@ -222,29 +216,24 @@
     </div>
     <!-- Footer End -->
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- live data search -->
     <script>
         $(document).ready(function () {
             $("#messageForm").submit(function (e) {
                 e.preventDefault(); // Prevent the default form submission
-
                 // Get the message from the textarea
                 var message = $("#message").val();
-
                 // Send the message using AJAX
                 $.ajax({
                     type: "POST",
-                    url: "store_message.php", // Replace with the URL of your PHP script
+                    url: "store_message.php",
                     data: { message: message },
                     success: function (response) {
-                        // Handle the response from the server (e.g., display a success message)
                         alert(response);
                     },
                     error: function () {

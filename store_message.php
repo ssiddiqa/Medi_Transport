@@ -1,3 +1,4 @@
+<!-- user message send to database -->
 <?php
 require_once 'connect.php'; // Include your database connection script
 

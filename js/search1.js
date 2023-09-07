@@ -1,3 +1,4 @@
+// train schedule js file
 //   for select option
   const selectionDropdown = document.getElementById("selection");
         const nameInput = document.getElementById("nameInput");

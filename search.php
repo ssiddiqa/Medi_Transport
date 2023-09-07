@@ -24,9 +24,6 @@ require_once 'connect.php';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -117,6 +114,7 @@ require_once 'connect.php';
                             <option value="specialty">Specialty</option>
                         </select>
                         <!-- Input sections for different options -->
+                        <!-- text input -->
                         <div id="nameInput" style="display: none;">
                             <label for="name" class="mt-2"><b>Enter Doctor's Name or Hospital's Name:</b></label><br>
                             <div class="container">
@@ -125,7 +123,7 @@ require_once 'connect.php';
                                     id="search">
                             </div>
                         </div>
-
+                        <!-- specialty input -->
                         <div id="specialtyInput" style="display: none;">
                             <label for="Specialty" class="mt-2"><b>Enter Specialty :</b></label>
                             <br>
@@ -140,7 +138,8 @@ require_once 'connect.php';
                                 <option value="Paediatrician">Paediatrician</option>
                                 <option value="Ophthalmologist">Ophthalmologist</option>
                             </select>
-                            <button class="btn btn-dark border-0 w-25 mt-2" name="submit">Search</button>
+                            <button class="btn btn-primary border-0 w-25 mt-4 p-3 rounded-5"
+                                name="submit">Search</button>
                         </div>
 
                     </form>
@@ -152,6 +151,7 @@ require_once 'connect.php';
         <!-- Search Result Start -->
         <div class="container-fluid py-5" id="searchresult">
             <div class="table-responsive-sm">
+                <!-- specialty search result -->
                 <table class="table  table-hover">
                     <?php
                     if (isset($_POST['submit'])) {
@@ -183,6 +183,9 @@ require_once 'connect.php';
                         </tbody>
                         ';
                             }
+                        } else {
+                            // if no search data found
+                            echo '<p class="text-center">No Data Found!</p>';
                         }
                     }
                     ?>

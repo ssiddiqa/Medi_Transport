@@ -24,9 +24,6 @@ require_once 'connect.php';
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -118,6 +115,7 @@ require_once 'connect.php';
                             <option value="location">Location</option>
                         </select>
                         <!-- Input sections for different options -->
+                        <!-- text input -->
                         <div id="nameInput" style="display: none;">
                             <label for="name" class="mt-2"><b>Enter Any text: </b></label><br>
                             <div class="container">
@@ -125,23 +123,43 @@ require_once 'connect.php';
                                     id="search">
                             </div>
                         </div>
-
+                        <!-- location inputs -->
                         <div id="LocationInput" style="display: none;">
-                            <label for="location" class="mt-2"><b>Enter Location :</b></label>
+                            <!-- from location -->
+                            <label for="from" class="mt-2"><b>From :</b></label>
                             <br>
-                            <select class="form-select border-primary w-40 speciality-search mt-2" name="search"
+                            <select class="form-select border-primary w-40 speciality-search mt-2" name="from" id="from"
                                 style="height: 60px;">
                                 <option selected>Location</option>
+                                <option value="Tangail">Tangail</option>
+                                <option value="Dhaka">Dhaka</option>
+                            </select>
+                            <!-- to location -->
+                            <label for="to" class="mt-2"><b>To :</b></label>
+                            <br>
+                            <select class="form-select border-primary w-40 speciality-search mt-2" name="to" id=to
+                                style="height: 60px;">
+                                <option selected>Location</option>
+                                <option value="Banga Bondhu setu (East)">Banga Bondhu setu (East)</option>
                                 <option value="Chilahati">Chilahati</option>
+                                <option value="Chittagong">Chittagong</option>
+                                <option value="Dewangonj Bazar">Dewangonj Bazar</option>
                                 <option value="Dhaka">Dhaka</option>
                                 <option value="Dinajpur">Dinajpur</option>
+                                <option value="Ishurdi">Ishurdi</option>
                                 <option value="Khula">Khulna</option>
+                                <option value="Kishorganj">Kishorganj</option>
                                 <option value="Lalmanirhat">Lalmanirhat</option>
+                                <option value="	Mohangonj">Mohangonj</option>
+                                <option value="Noakhali">Noakhali</option>
                                 <option value="Rajshahi">Rajshahi</option>
                                 <option value="Rangpur">Rangpur</option>
                                 <option value="Sirajganj">Sirajganj</option>
+                                <option value="Sylhet">Sylhet</option>
+                                <option value="Tarakandi">Tarakandi</option>
                             </select>
-                            <button class="btn btn-dark border-0 w-25 mt-2" name="submit">Search</button>
+                            <button class="btn btn-primary border-0 w-25 mt-4 p-3 rounded-5" name="submit">Search
+                                Trains</button>
                         </div>
 
                     </form>
@@ -150,14 +168,15 @@ require_once 'connect.php';
         </div>
         <!-- Search End -->
 
-        <!-- Search Result Start Specialty-->
+        <!-- Search Result Start location-->
         <div class="container-fluid py-5" id="searchresult">
             <div class="table-responsive-sm">
                 <table class="table  table-hover">
                     <?php
                     if (isset($_POST['submit'])) {
-                        $search = $_POST['search'];
-                        $sql = "select * from `trainschedule` where `To(location)`='$search'";
+                        $fromLocation = $_POST["from"];
+                        $toLocation = $_POST["to"];
+                        $sql = "select * from `trainschedule` where `From(location)`='$fromLocation' and `To(location)`='$toLocation'";
                         $result = mysqli_query($con, $sql);
                         // $num = mysqli_num_rows($result);
                         // echo $num;
@@ -188,6 +207,8 @@ require_once 'connect.php';
                         </tbody>
                         ';
                             }
+                        } else {
+                            echo '<p class="text-center">No Data Found!</p>';
                         }
                     }
                     ?>
