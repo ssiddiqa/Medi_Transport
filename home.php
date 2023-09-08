@@ -207,7 +207,8 @@
                                 Reserved.</p>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
-                            <p class="mb-0">Designed by <a class="text-primary" href="#">ICT</a></p>
+                            <p class="mb-0">Designed by <a class="text-primary"
+                                    href="https://github.com/ssiddiqa">ICT</a></p>
                         </div>
                     </div>
                 </div>
