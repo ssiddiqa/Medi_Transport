@@ -1,5 +1,5 @@
 <!-- for ajax  -->
-<!-- live train data search results -->
+
 <div class="container-fluid py-5">
     <div class="table-responsive-sm">
         <table class="table table-hover">
@@ -7,7 +7,7 @@
             $con = mysqli_connect('localhost', 'root', '', 'doctorsdata');
             // Create connection
             $input = $_POST['name'];
-            $sql = "SELECT * FROM `trainschedule` WHERE `Train No` LIKE '%{$input}%' OR `Name` Like '%{$input}%' OR `To(location)` Like '%{$input}%' OR `Departure Time` Like '%{$input}%' OR `Arrival Time` Like '%{$input}%' ";
+            $sql = "SELECT * FROM `trainschedule` WHERE `Train No` LIKE '%{$input}%' OR `Name` Like '%{$input}%' OR `To(location)` Like '%{$input}%' OR `From(location)` Like '%{$input}%' OR `Departure Time` Like '%{$input}%' OR `Arrival Time` Like '%{$input}%' ";
             $result = mysqli_query($con, $sql);
 
             if (mysqli_num_rows($result) > 0) {

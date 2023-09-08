@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>LifeSync Hub</title>
+    <title>Medi Transit</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -38,7 +38,7 @@
                 <a href="home.php" class="navbar-brand">
                     <h1 class="m-0 text-uppercase" style="color:#13C5DD"> <i class="fa fa-life-ring"
                             aria-hidden="true"></i>
-                        LifeSync Hub
+                        Medi Transit
                     </h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -63,8 +63,8 @@
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
                     <h4 class="d-inline-block display-6 text-uppercase border-bottom border-5 hero-text">Welcome To
-                        LifeSync Hub</h4>
-                    <h5>Introducing LifeSync Hub: Your all-in-one web application for seamless daily living.
+                        Medi Transit</h4>
+                    <h5>Introducing Medi Transit: Your all-in-one web application for seamless daily living.
                         Discover local doctors, medical facilities, and healthcare information tailored to your area,
                         and stay on track with real-time train schedules for stress-free commuting, ensuring your daily
                         life is
@@ -92,7 +92,7 @@
                         <h1 class="display-4">We intend to make life easier for you and your family.
                         </h1>
                     </div>
-                    <p>Introducing "LifeSync Hub"- the ultimate daily life companion! This innovative web application
+                    <p>Introducing "Medi Transit"- the ultimate daily life companion! This innovative web application
                         seamlessly integrates healthcare and commute planning, making it easier than ever to find local
                         doctors and access real-time train schedules. Simplify your daily routine, whether you're
                         searching for a healthcare professional or planning your commute. With LifeSync Hub, you have
@@ -154,7 +154,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Get In Touch</h4>
-                    <p class="mb-4">LifeSync Hub</p>
+                    <p class="mb-4">Medi Transit</p>
 
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>admin@gmail.com</p>
                     <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+88 01792492722</p>
@@ -203,7 +203,7 @@
                 <div class="container">
                     <div class="row g-5">
                         <div class="col-md-6 text-center text-md-start">
-                            <p class="mb-md-0">&copy; <a class="text-primary" href="#">LifeSync Hub</a>. All Rights
+                            <p class="mb-md-0">&copy; <a class="text-primary" href="#">Medi Transit</a>. All Rights
                                 Reserved.</p>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
