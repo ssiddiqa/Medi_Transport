@@ -45,7 +45,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="home.php" class="nav-item nav-link active">Home</a>
+                        <a href="home.php" class="nav-item nav-link ">Home</a>
                         <a href="home.php#about" class="nav-item nav-link">About</a>
                         <a href="home.php#service" class="nav-item nav-link">Services</a>
                         <a href="#footer" class="nav-item nav-link">Contact</a>
@@ -94,9 +94,10 @@
                     <p>Introducing "Medi Transit"- the ultimate daily life companion! This innovative web application
                         seamlessly integrates healthcare and commute planning, making it easier than ever to find local
                         doctors and access real-time train schedules. Simplify your daily routine, whether you're
-                        searching for a healthcare professional or planning your commute. With LifeSync Hub, you have
+                        searching for a healthcare professional or planning your commute. With Medi Transit, you
+                        have
                         the power to manage both your health and your daily travel effortlessly.
-                        Experience the convenience of LifeSync Hub today and take control of your daily life with ease.
+                        Experience the convenience of Medi Transit today and take control of your daily life with ease.
                         Say hello to a healthier you and a smoother commute, all in one place!
                     </p>
 
@@ -178,7 +179,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                         Contact Us</h4>
-                    <form id="messageForm" method="POST">
+                    <form id="messageForm" method="POST"> <!--send message -->
                         <textarea class="form-control p-3 border-0" id="message" name="message"
                             placeholder="Your Message" required></textarea>
                         <input class="mt-2 btn btn-primary" type="submit" value="Send">
